@@ -10,9 +10,9 @@ const { spawn, execSync } = require('child_process');
 
 // 环境变量
 const PORT = process.env.PORT || 3000;           // http 服务
-const SUB_PATH = process.env.SUB_PATH || 'sub';  // 节点订阅token
+const SUB_PATH = process.env.SUB_PATH || 'yang';  // 节点订阅token
 const config = {
-  UUID: process.env.UUID || 'a29738e5-bee1-c0fc-b484-ae7c49cbc828',  // 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
+  UUID: process.env.UUID || '355bc2ea-80f6-4465-a734-8e42c7dd5710',  // 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
   NEZHA_SERVER: process.env.NEZHA_SERVER || '',       // 哪吒面板地址，v1格式: nezha.xxx.com:8008  v0格式： nezha.xxx.com
   NEZHA_PORT: process.env.NEZHA_PORT || '',           // 哪吒v1请留空，哪吒v0 agent端口
   NEZHA_KEY: process.env.NEZHA_KEY || '',             // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0-agent密钥
@@ -23,7 +23,7 @@ const config = {
   CFPORT: process.env.CFPORT || '443',                // 优选域名或优选ip对应端口
   NAME: process.env.NAME || '',                       // 节点备注
   S5_PORT: process.env.S5_PORT || '',                 // socks5端口,支持多端口玩具可填写，否则不动
-  HY2_PORT: process.env.HY2_PORT || '',               // Hy2 端口，支持多端口玩具可填写，否则不动
+  HY2_PORT: process.env.HY2_PORT || '20167',               // Hy2 端口，支持多端口玩具可填写，否则不动
   TUIC_PORT: process.env.TUIC_PORT || '',             // Tuic 端口，支持多端口玩具可填写，否则不动 
   ANYTLS_PORT: process.env.ANYTLS_PORT || '',         // AnyTLS 端口,支持多端口玩具可填写，否则不动
   REALITY_PORT: process.env.REALITY_PORT || '',       // Reality 端口,支持多端口玩具可填写，否则不动  
